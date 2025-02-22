@@ -1,15 +1,15 @@
 {
-  "name": "simple-text-to-speech",
+  "name": "tts-web",
   "version": "1.0.0",
   "description": "A simple text-to-speech web application using kokoro-js and WebGPU",
-  "main": "index.js",
+  "main": "main.js",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview"
   },
-  "author": "Your Name",
-  "license": "ISC",
+  "author": "Steve Seguin",
+  "license": "MIT",
   "dependencies": {
     "kokoro-js": "^1.2.0"
   },

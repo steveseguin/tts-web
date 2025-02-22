@@ -5,59 +5,235 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simple Text to Speech</title>
     <style>
-        body {
-            font-family: sans-serif;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-            margin: 0;
-            padding: 20px;
-        }
+		:root {
+			--bg-primary: #1a1a1a;
+			--bg-secondary: #2d2d2d;
+			--text-primary: #ffffff;
+			--text-secondary: #b3b3b3;
+			--accent: #646cff;
+			--accent-hover: #747bff;
+			--border: #3f3f3f;
+			--progress-bg: #3f3f3f;
+			--progress-fill: #646cff;
+		}
 
-        textarea {
-            width: 80%;
-            max-width: 600px;
-            height: 150px;
-            margin-bottom: 10px;
-            padding: 10px;
-            border: 1px solid #ccc;
-            resize: vertical;
-        }
+		body {
+			font-family: 'Inter', -apple-system, system-ui, sans-serif;
+			background: var(--bg-primary);
+			color: var(--text-primary);
+			line-height: 1.6;
+			padding: 2rem;
+			max-width: 800px;
+			margin: 0 auto;
+		}
 
-        button, select, input[type="range"] {
-            margin: 5px;
-            padding: 8px 15px;
-            cursor: pointer;
-        }
+		.app-container {
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
 
-        #chunks {
-            margin-top: 20px;
-            width: 80%;
-            max-width: 600px;
-            overflow-y: auto;
-            max-height: 300px;
-        }
+		h1 {
+			color: var(--text-primary);
+			font-size: 2.5rem;
+			font-weight: 600;
+			margin-bottom: 2rem;
+			text-align: center;
+		}
 
-        .audio-chunk {
-            padding: 10px;
-            border: 1px solid #eee;
-            margin-bottom: 5px;
-        }
+		textarea {
+			width: 100%;
+			background: var(--bg-secondary);
+			color: var(--text-primary);
+			border: 1px solid var(--border);
+			border-radius: 8px;
+			font-size: 1rem;
+			transition: border-color 0.25s;
+			box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+			padding: 15px;
+		}
+
+		textarea:focus {
+			border-color: var(--accent);
+			outline: none;
+		}
+
+		button {
+			background: var(--accent);
+			color: var(--text-primary);
+			border: none;
+			border-radius: 8px;
+			font-size: 0.9rem;
+			font-weight: 500;
+			padding: 0.6em 1.2em;
+			transition: background-color 0.25s;
+		}
+
+		button:hover {
+			background: var(--accent-hover);
+		}
+
+		button:disabled {
+			background: var(--border);
+			cursor: not-allowed;
+			opacity: 0.6;
+		}
+
+		select {
+			background: var(--bg-secondary);
+			color: var(--text-primary);
+			border: 1px solid var(--border);
+			border-radius: 8px;
+			padding: 0.6em 1.2em;
+			font-size: 0.9rem;
+			cursor: pointer;
+		}
+
+		input[type="range"] {
+			-webkit-appearance: none;
+			background: var(--border);
+			border-radius: 8px;
+			height: 6px;
+			width: 150px;
+		}
+
+		input[type="range"]::-webkit-slider-thumb {
+			-webkit-appearance: none;
+			background: var(--accent);
+			border: none;
+			border-radius: 50%;
+			height: 16px;
+			width: 16px;
+			cursor: pointer;
+			transition: background 0.25s;
+		}
+
+		input[type="range"]::-webkit-slider-thumb:hover {
+			background: var(--accent-hover);
+		}
+
+		#chunks {
+			width: 100%;
+			background: var(--bg-secondary);
+			border-radius: 8px;
+			padding: 1rem;
+			margin-top: 2rem;
+		}
+		
+		#chunks:empty {
+			display:none;
+		}
+
+		.audio-chunk {
+			background: var(--bg-primary);
+			border-radius: 8px;
+			padding: 1rem;
+			margin-bottom: 1rem;
+		}
+
+		.audio-chunk:last-child {
+			margin-bottom: 0;
+		}
+
+		.audio-chunk p {
+			color: var(--text-secondary);
+			margin: 0 0 0.5rem 0;
+		}
+
+		.audio-chunk audio {
+			width: 100%;
+			margin-top: 0.5rem;
+		}
+
+		#progressContainer {
+			position: fixed;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			background: var(--bg-secondary);
+			border: none;
+			border-radius: 12px;
+			padding: 2rem;
+			width: 90%;
+			max-width: 400px;
+			box-shadow: 0 4px 32px rgba(0, 0, 0, 0.4);
+			z-index: 1000;
+		}
+
+		#progressContainer::before {
+			content: '';
+			position: fixed;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background: rgba(0, 0, 0, 0.7);
+			z-index: -1;
+			border-radius: 8px;
+		}
+
+		#progressBar {
+			background: var(--progress-fill);
+			border-radius: 6px;
+			height: 12px;
+			transition: width 0.3s ease;
+			box-shadow: 0 0 10px var(--progress-fill);
+		}
+
+		#progressStatus {
+			color: var(--text-primary);
+			font-size: 1rem;
+			margin-top: 1rem;
+			text-align: center;
+		}
+
+		/* Controls container */
+		.controls-container {
+			width: 100%;
+			display: flex;
+			gap: 1rem;
+			align-items: center;
+			flex-wrap: wrap;
+			justify-content: center;
+			margin: 1.5rem 0;
+			padding: 1rem;
+			background: var(--bg-secondary);
+			border-radius: 8px;
+		}
+
+		/* Speed control label */
+		.speed-control-container {
+			display: flex;
+			align-items: center;
+			gap: 0.5rem;
+		}
+
+		#speedValue {
+			color: var(--accent);
+			font-weight: 500;
+		}
     </style>
 </head>
 <body>
-    <h1>Simple Text to Speech</h1>
-    <textarea id="textInput" placeholder="Enter text here..."></textarea>
-    <div>
-        <select id="voiceSelect"></select>
-        <input type="range" id="speedControl" min="0.5" max="2" step="0.1" value="1">
-        <label for="speedControl">Speed: <span id="speedValue">1</span>x</label>
-        <button id="generateButton">Generate & Play</button>
-        <button id="downloadButton" disabled>Download Audio</button>
+    <div class="app-container">
+        <h1>Simple Text to Speech</h1>
+        <textarea id="textInput" placeholder="Enter text here..."></textarea>
+        <div class="controls-container">
+            <select id="voiceSelect"></select>
+            <div class="speed-control-container">
+                <input type="range" id="speedControl" min="0.5" max="2" step="0.1" value="1">
+                <label for="speedControl">Speed: <span id="speedValue">1</span>x</label>
+            </div>
+            <button id="generateButton">Generate & Play</button>
+            <button id="downloadButton" disabled>Download Audio</button>
+        </div>
+        <div id="progressContainer">
+            <div id="progressBar"></div>
+            <div id="progressStatus">Loading model...</div>
+        </div>
+        <div id="chunks"></div>
     </div>
-    <div id="chunks"></div>
-	<script type="module" src="./main.js"></script>
+    <script type="module" src="./main.js"></script>
 </body>
 </html>
