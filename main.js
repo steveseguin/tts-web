@@ -69,15 +69,24 @@ async function init() {
     const progressBar = document.getElementById('progressBar');
     const progressStatus = document.getElementById('progressStatus');
 
-    progressContainer.style.display = 'block';
+    // Show progress container and initialize progress
+    progressContainer.style.visibility = 'visible';
+    progressContainer.style.opacity = '1';
+    progressBar.style.width = '0%';
+    progressStatus.textContent = 'Initializing...';
+    
     const device = (await detectWebGPU()) ? "webgpu" : "wasm";
     
     try {
         // Try to get cached model first
+        progressStatus.textContent = 'Checking cache...';
+        progressBar.style.width = '10%';
         let modelData = await getCachedModel();
         
         if (!modelData) {
             progressStatus.textContent = 'Downloading model...';
+            progressBar.style.width = '20%';
+            
             const modelUrl = 'https://huggingface.co/onnx-community/Kokoro-82M-v1.0-ONNX/resolve/main/onnx/model.onnx';
             const response = await fetch(modelUrl);
             const total = +response.headers.get('Content-Length');
@@ -94,36 +103,51 @@ async function init() {
                 loaded += value.length;
 
                 const percentage = (loaded / total) * 100;
-                progressBar.style.width = `${percentage}%`;
-                progressStatus.textContent = `Downloading model: ${percentage.toFixed(2)}%`;
+                // Scale download progress between 20% and 70%
+                progressBar.style.width = `${20 + (percentage * 0.5)}%`;
+                progressStatus.textContent = `Downloading model: ${percentage.toFixed(1)}%`;
             }
 
             const modelBlob = new Blob(chunks);
             modelData = new Uint8Array(await modelBlob.arrayBuffer());
             
             progressStatus.textContent = 'Caching model...';
+            progressBar.style.width = '80%';
             await cacheModel(modelData);
+            
         } else {
-            progressStatus.textContent = 'Loading cached model...';
-            progressBar.style.width = '100%';
+            progressStatus.textContent = 'Loading from cache...';
+            progressBar.style.width = '50%';
+            await new Promise(resolve => setTimeout(resolve, 500)); // Brief pause to show status
         }
 
         // Custom load function to use the model data
+        progressStatus.textContent = 'Initializing model...';
+        progressBar.style.width = '90%';
+        
         const customLoadFn = async () => modelData;
-
         tts = await KokoroTTS.from_pretrained("onnx-community/Kokoro-82M-v1.0-ONNX", {
             dtype: device === "wasm" ? "q8" : "fp32",
             device,
             load_fn: customLoadFn
         });
 
-        progressContainer.style.display = 'none';
+        // Show completion before hiding
+        progressBar.style.width = '100%';
+        progressStatus.textContent = 'Ready!';
+        await new Promise(resolve => setTimeout(resolve, 500)); // Brief pause to show completion
+
+        progressContainer.style.visibility = 'hidden';
+        progressContainer.style.opacity = '0';
+        
         populateVoiceSelect(tts.voices);
         selectedVoice = Object.keys(tts.voices)[0];
         
     } catch (error) {
         console.error('Failed to load model:', error);
-        progressStatus.textContent = 'Failed to load model. ' + error.message;
+        progressStatus.textContent = 'Failed to load model: ' + error.message;
+        progressBar.style.width = '100%';
+        progressBar.style.backgroundColor = '#ff4444';
         
         // If loading from cache failed, clear it and try fresh download next time
         if (await getCachedModel()) {
