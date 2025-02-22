@@ -2,6 +2,8 @@
 
 This is a simple text-to-speech web application that utilizes `kokoro-js` and WebGPU (or WebAssembly fallback) to convert text into natural-sounding speech directly in the browser.
 
+Free Online Demo: https://steveseguin.github.io/tts-web/
+
 ## Installation
 
 To install the necessary dependencies, run:
