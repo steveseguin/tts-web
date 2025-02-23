@@ -234,6 +234,22 @@
 			color: var(--accent);
 			font-weight: 500;
 		}
+		
+		footer {
+			margin-top: 2rem;
+			text-align: center;
+			color: var(--text-secondary);
+		}
+
+		footer a {
+			color: var(--accent);
+			text-decoration: none;
+			transition: color 0.25s;
+		}
+
+		footer a:hover {
+			color: var(--accent-hover);
+		}
     </style>
 </head>
 <body>
@@ -255,6 +271,9 @@
         </div>
         <div id="chunks"></div>
     </div>
+	<footer>
+		<p>Open Source on <a href="https://github.com/steveseguin/tts-web" target="_blank" rel="noopener">GitHub</a></p>
+	</footer>
     <script type="module" src="./main.js"></script>
 </body>
 </html>
