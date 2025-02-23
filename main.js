@@ -197,7 +197,6 @@ async function generateAndPlay() {
     }
 }
 
-const textInput = document.getElementById('textInput');
 const charCounter = document.querySelector('.character-counter');
 const MAX_CHARS = 2000; // Adjust this value as needed
 
