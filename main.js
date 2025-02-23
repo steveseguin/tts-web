@@ -127,7 +127,6 @@ async function init() {
         progressContainer.style.opacity = '0';
         
         populateVoiceSelect(tts.voices);
-        selectedVoice = Object.keys(tts.voices)[0];
         
     } catch (error) {
         console.error('Failed to load model:', error);
@@ -151,6 +150,10 @@ function populateVoiceSelect(voices) {
         option.textContent = `${voices[key].name} (${voices[key].language === 'en-us' ? 'American' : 'British'} ${voices[key].gender})`;
         voiceSelect.appendChild(option);
     }
+
+    // Set default voice to af_aoede
+    voiceSelect.value = 'af_aoede';
+    selectedVoice = 'af_aoede';
 
     voiceSelect.addEventListener('change', (e) => {
         selectedVoice = e.target.value;
