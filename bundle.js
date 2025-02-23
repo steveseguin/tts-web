@@ -22,7 +22,7 @@ class AudioStreamHandler {
         
         // Add 50ms of silence padding at the start
         const sampleRate = decodedBuffers[0].sampleRate;
-        const paddingSamples = Math.ceil(sampleRate * 0.05); // 50ms worth of samples
+        const paddingSamples = Math.ceil(sampleRate * 0.2); // 50ms worth of samples
         
         const totalLength = paddingSamples + decodedBuffers.reduce((acc, buffer) => acc + buffer.length, 0);
         const offlineCtx = new OfflineAudioContext({

@@ -164,7 +164,7 @@ async function generateAndPlay() {
     generateButton.disabled = true;
     downloadButton.disabled = true;
 
-    const text = textInput.value;
+    const text = textInput.value.trim() || "This voice was generated completely in your browser, locally and for free.";
     const speed = parseFloat(speedControl.value);
 
     const streamer = new TextSplitterStream();
@@ -178,7 +178,7 @@ async function generateAndPlay() {
         const stream = tts.stream(streamer, { 
             voice: selectedVoice, 
             speed,
-            streamAudio: false // Set to true for chunk-by-chunk playback
+            streamAudio: false
         });
 
         for await (const { audio } of stream) {
