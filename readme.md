@@ -9,7 +9,7 @@ The library can be used in two ways:
 ### 1. Direct Import (Simplest)
 ```html
 <script type="module">
-  import { KokoroTTS, TextSplitterStream, detectWebGPU } from 'https://raw.githubusercontent.com/steveseguin/tts.rocks/refs/heads/main/dist/lib/kokoro-bundle.es.js';
+  import { KokoroTTS, TextSplitterStream, detectWebGPU } from './kokoro-bundle.es.js';
   // Your code here
 </script>
 ```
@@ -33,7 +33,7 @@ Here's a complete example showing basic TTS functionality:
     <button id="speak">Speak</button>
 
     <script type="module">
-        import { KokoroTTS, TextSplitterStream, detectWebGPU } from 'https://raw.githubusercontent.com/steveseguin/tts.rocks/refs/heads/main/dist/lib/kokoro-bundle.es.js';
+        import { KokoroTTS, TextSplitterStream, detectWebGPU } from './kokoro-bundle.es.js';
 
         let tts;
 
