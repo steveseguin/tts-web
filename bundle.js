@@ -22,7 +22,7 @@ class AudioStreamHandler {
         
         // Add 50ms of silence padding at the start
         const sampleRate = decodedBuffers[0].sampleRate;
-        const paddingSamples = Math.ceil(sampleRate * 0.2); // 50ms worth of samples
+        const paddingSamples = Math.ceil(sampleRate * 0.2); // 200ms worth of samples
         
         const totalLength = paddingSamples + decodedBuffers.reduce((acc, buffer) => acc + buffer.length, 0);
         const offlineCtx = new OfflineAudioContext({
@@ -31,15 +31,15 @@ class AudioStreamHandler {
             sampleRate: sampleRate
         });
 
-        // Start after the padding silence
-        let offset = 0.05; // 50ms padding
-        decodedBuffers.forEach(buffer => {
-            const source = offlineCtx.createBufferSource();
-            source.buffer = buffer;
-            source.connect(offlineCtx.destination);
-            source.start(offset);
-            offset += buffer.duration;
-        });
+	    // Start after the padding silence
+		let offset = 0.2; // 200ms padding
+		decodedBuffers.forEach(buffer => {
+			const source = offlineCtx.createBufferSource();
+			source.buffer = buffer;
+			source.connect(offlineCtx.destination);
+			source.start(offset);
+			offset += buffer.duration;
+		});
 
         return offlineCtx.startRendering();
     }
