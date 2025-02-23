@@ -1,7 +1,7 @@
-# TTS Web (Text-to-Speech Web Application)
+# TTS Rocks (Free Text-to-Speech Web Application)
 A browser-based text-to-speech application using `kokoro-js` that leverages WebGPU (with WebAssembly fallback) for high-quality speech synthesis. The model and processing runs entirely client-side.
 
-[Live Demo](https://steveseguin.github.io/tts-web/)
+[Live Demo](https://tts.rocks/)
 
 ## Installation & Setup
 The library can be used in two ways:
