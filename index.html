@@ -75,6 +75,7 @@
 			transition: border-color 0.25s;
 			box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 			padding: 15px;
+			min-height: 100px;
 		}
 
 		textarea:focus {
@@ -271,10 +272,8 @@
 <body>
     <div class="app-container">
         <h1>AI-Powered Browser TTS</h1>
-        <div class="textarea-container">
-			<textarea id="textInput" placeholder="Enter text here..."></textarea>
-			<div class="character-counter">0 / 2000</div>
-		</div>
+		<h3>100% free and runs locally in your browser</h3>
+        <textarea id="textInput" placeholder="Enter text here..."></textarea>
         <div class="controls-container">
             <select id="voiceSelect"></select>
             <div class="speed-control-container">

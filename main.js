@@ -197,22 +197,6 @@ async function generateAndPlay() {
     }
 }
 
-const charCounter = document.querySelector('.character-counter');
-const MAX_CHARS = 2000; // Adjust this value as needed
-
-textInput.addEventListener('input', () => {
-    const length = textInput.value.length;
-    charCounter.textContent = `${length} / ${MAX_CHARS}`;
-    
-    // Optional: Add visual feedback when approaching/exceeding limit
-    if (length > MAX_CHARS) {
-        charCounter.style.color = 'var(--accent)';
-        textInput.value = textInput.value.slice(0, MAX_CHARS); // Prevent exceeding limit
-    } else {
-        charCounter.style.color = 'var(--text-secondary)';
-    }
-});
-
 downloadButton.addEventListener('click', () => {
     if (audioBlob) {
         const url = URL.createObjectURL(audioBlob);
