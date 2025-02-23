@@ -73,6 +73,7 @@ Here's a complete example showing basic TTS functionality:
 </body>
 </html>
 ```
+Note: The `kokoro-bundle.es.js` file in the dist/lib folder is expected to be hosted alongside the above example for for it to work.
 
 ## Development Build
 For development with build tools:
