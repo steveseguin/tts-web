@@ -1,3 +1,209 @@
+/**
+ * Bundle of kokoro-js and dependencies
+ * 
+ * kokoro-js License:
+ * Apache License
+                           Version 2.0, January 2004
+                        http://www.apache.org/licenses/
+
+   TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
+
+   1. Definitions.
+
+      "License" shall mean the terms and conditions for use, reproduction,
+      and distribution as defined by Sections 1 through 9 of this document.
+
+      "Licensor" shall mean the copyright owner or entity authorized by
+      the copyright owner that is granting the License.
+
+      "Legal Entity" shall mean the union of the acting entity and all
+      other entities that control, are controlled by, or are under common
+      control with that entity. For the purposes of this definition,
+      "control" means (i) the power, direct or indirect, to cause the
+      direction or management of such entity, whether by contract or
+      otherwise, or (ii) ownership of fifty percent (50%) or more of the
+      outstanding shares, or (iii) beneficial ownership of such entity.
+
+      "You" (or "Your") shall mean an individual or Legal Entity
+      exercising permissions granted by this License.
+
+      "Source" form shall mean the preferred form for making modifications,
+      including but not limited to software source code, documentation
+      source, and configuration files.
+
+      "Object" form shall mean any form resulting from mechanical
+      transformation or translation of a Source form, including but
+      not limited to compiled object code, generated documentation,
+      and conversions to other media types.
+
+      "Work" shall mean the work of authorship, whether in Source or
+      Object form, made available under the License, as indicated by a
+      copyright notice that is included in or attached to the work
+      (an example is provided in the Appendix below).
+
+      "Derivative Works" shall mean any work, whether in Source or Object
+      form, that is based on (or derived from) the Work and for which the
+      editorial revisions, annotations, elaborations, or other modifications
+      represent, as a whole, an original work of authorship. For the purposes
+      of this License, Derivative Works shall not include works that remain
+      separable from, or merely link (or bind by name) to the interfaces of,
+      the Work and Derivative Works thereof.
+
+      "Contribution" shall mean any work of authorship, including
+      the original version of the Work and any modifications or additions
+      to that Work or Derivative Works thereof, that is intentionally
+      submitted to Licensor for inclusion in the Work by the copyright owner
+      or by an individual or Legal Entity authorized to submit on behalf of
+      the copyright owner. For the purposes of this definition, "submitted"
+      means any form of electronic, verbal, or written communication sent
+      to the Licensor or its representatives, including but not limited to
+      communication on electronic mailing lists, source code control systems,
+      and issue tracking systems that are managed by, or on behalf of, the
+      Licensor for the purpose of discussing and improving the Work, but
+      excluding communication that is conspicuously marked or otherwise
+      designated in writing by the copyright owner as "Not a Contribution."
+
+      "Contributor" shall mean Licensor and any individual or Legal Entity
+      on behalf of whom a Contribution has been received by Licensor and
+      subsequently incorporated within the Work.
+
+   2. Grant of Copyright License. Subject to the terms and conditions of
+      this License, each Contributor hereby grants to You a perpetual,
+      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+      copyright license to reproduce, prepare Derivative Works of,
+      publicly display, publicly perform, sublicense, and distribute the
+      Work and such Derivative Works in Source or Object form.
+
+   3. Grant of Patent License. Subject to the terms and conditions of
+      this License, each Contributor hereby grants to You a perpetual,
+      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+      (except as stated in this section) patent license to make, have made,
+      use, offer to sell, sell, import, and otherwise transfer the Work,
+      where such license applies only to those patent claims licensable
+      by such Contributor that are necessarily infringed by their
+      Contribution(s) alone or by combination of their Contribution(s)
+      with the Work to which such Contribution(s) was submitted. If You
+      institute patent litigation against any entity (including a
+      cross-claim or counterclaim in a lawsuit) alleging that the Work
+      or a Contribution incorporated within the Work constitutes direct
+      or contributory patent infringement, then any patent licenses
+      granted to You under this License for that Work shall terminate
+      as of the date such litigation is filed.
+
+   4. Redistribution. You may reproduce and distribute copies of the
+      Work or Derivative Works thereof in any medium, with or without
+      modifications, and in Source or Object form, provided that You
+      meet the following conditions:
+
+      (a) You must give any other recipients of the Work or
+          Derivative Works a copy of this License; and
+
+      (b) You must cause any modified files to carry prominent notices
+          stating that You changed the files; and
+
+      (c) You must retain, in the Source form of any Derivative Works
+          that You distribute, all copyright, patent, trademark, and
+          attribution notices from the Source form of the Work,
+          excluding those notices that do not pertain to any part of
+          the Derivative Works; and
+
+      (d) If the Work includes a "NOTICE" text file as part of its
+          distribution, then any Derivative Works that You distribute must
+          include a readable copy of the attribution notices contained
+          within such NOTICE file, excluding those notices that do not
+          pertain to any part of the Derivative Works, in at least one
+          of the following places: within a NOTICE text file distributed
+          as part of the Derivative Works; within the Source form or
+          documentation, if provided along with the Derivative Works; or,
+          within a display generated by the Derivative Works, if and
+          wherever such third-party notices normally appear. The contents
+          of the NOTICE file are for informational purposes only and
+          do not modify the License. You may add Your own attribution
+          notices within Derivative Works that You distribute, alongside
+          or as an addendum to the NOTICE text from the Work, provided
+          that such additional attribution notices cannot be construed
+          as modifying the License.
+
+      You may add Your own copyright statement to Your modifications and
+      may provide additional or different license terms and conditions
+      for use, reproduction, or distribution of Your modifications, or
+      for any such Derivative Works as a whole, provided Your use,
+      reproduction, and distribution of the Work otherwise complies with
+      the conditions stated in this License.
+
+   5. Submission of Contributions. Unless You explicitly state otherwise,
+      any Contribution intentionally submitted for inclusion in the Work
+      by You to the Licensor shall be under the terms and conditions of
+      this License, without any additional terms or conditions.
+      Notwithstanding the above, nothing herein shall supersede or modify
+      the terms of any separate license agreement you may have executed
+      with Licensor regarding such Contributions.
+
+   6. Trademarks. This License does not grant permission to use the trade
+      names, trademarks, service marks, or product names of the Licensor,
+      except as required for reasonable and customary use in describing the
+      origin of the Work and reproducing the content of the NOTICE file.
+
+   7. Disclaimer of Warranty. Unless required by applicable law or
+      agreed to in writing, Licensor provides the Work (and each
+      Contributor provides its Contributions) on an "AS IS" BASIS,
+      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+      implied, including, without limitation, any warranties or conditions
+      of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A
+      PARTICULAR PURPOSE. You are solely responsible for determining the
+      appropriateness of using or redistributing the Work and assume any
+      risks associated with Your exercise of permissions under this License.
+
+   8. Limitation of Liability. In no event and under no legal theory,
+      whether in tort (including negligence), contract, or otherwise,
+      unless required by applicable law (such as deliberate and grossly
+      negligent acts) or agreed to in writing, shall any Contributor be
+      liable to You for damages, including any direct, indirect, special,
+      incidental, or consequential damages of any character arising as a
+      result of this License or out of the use or inability to use the
+      Work (including but not limited to damages for loss of goodwill,
+      work stoppage, computer failure or malfunction, or any and all
+      other commercial damages or losses), even if such Contributor
+      has been advised of the possibility of such damages.
+
+   9. Accepting Warranty or Additional Liability. While redistributing
+      the Work or Derivative Works thereof, You may choose to offer,
+      and charge a fee for, acceptance of support, warranty, indemnity,
+      or other liability obligations and/or rights consistent with this
+      License. However, in accepting such obligations, You may act only
+      on Your own behalf and on Your sole responsibility, not on behalf
+      of any other Contributor, and only if You agree to indemnify,
+      defend, and hold each Contributor harmless for any liability
+      incurred by, or claims asserted against, such Contributor by reason
+      of your accepting any such warranty or additional liability.
+
+   END OF TERMS AND CONDITIONS
+
+   APPENDIX: How to apply the Apache License to your work.
+
+      To apply the Apache License to your work, attach the following
+      boilerplate notice, with the fields enclosed by brackets "[]"
+      replaced with your own identifying information. (Don't include
+      the brackets!)  The text should be enclosed in the appropriate
+      comment syntax for the file format. We also recommend that a
+      file or class name and description of purpose be included on the
+      same "printed page" as the copyright notice for easier
+      identification within third-party archives.
+
+   Copyright [yyyy] [name of copyright owner]
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+ */
 (function(s0,dr){typeof exports=="object"&&typeof module<"u"?dr(exports):typeof define=="function"&&define.amd?define(["exports"],dr):(s0=typeof globalThis<"u"?globalThis:s0||self,dr(s0.kokoroBundle={}))})(this,function(s0){"use strict";var dr=typeof document<"u"?document.currentScript:null,ic,fo,lg={"./node_modules/onnxruntime-web/dist/ort-wasm-simd-threaded.jsep.wasm":(x,C,d)=>{x.exports=d.p+"ort-wasm-simd-threaded.jsep.wasm"},"./node_modules/onnxruntime-web/dist/ort.bundle.min.mjs?46eb":(x,C,d)=>{x.exports=d.p+"ort.bundle.min.mjs"},"?2ce3":()=>{},"?7a2c":()=>{},"?a42a":()=>{},"?2b25":()=>{},"?569f":()=>{},"?3f59":()=>{},"?154a":()=>{},"./node_modules/@huggingface/jinja/dist/index.js":(x,C,d)=>{d.r(C),d.d(C,{Environment:()=>EA,Interpreter:()=>SA,Template:()=>OA,parse:()=>Ie,tokenize:()=>S});var k=Object.freeze({Text:"Text",NumericLiteral:"NumericLiteral",BooleanLiteral:"BooleanLiteral",NullLiteral:"NullLiteral",StringLiteral:"StringLiteral",Identifier:"Identifier",Equals:"Equals",OpenParen:"OpenParen",CloseParen:"CloseParen",OpenStatement:"OpenStatement",CloseStatement:"CloseStatement",OpenExpression:"OpenExpression",CloseExpression:"CloseExpression",OpenSquareBracket:"OpenSquareBracket",CloseSquareBracket:"CloseSquareBracket",OpenCurlyBracket:"OpenCurlyBracket",CloseCurlyBracket:"CloseCurlyBracket",Comma:"Comma",Dot:"Dot",Colon:"Colon",Pipe:"Pipe",CallOperator:"CallOperator",AdditiveBinaryOperator:"AdditiveBinaryOperator",MultiplicativeBinaryOperator:"MultiplicativeBinaryOperator",ComparisonBinaryOperator:"ComparisonBinaryOperator",UnaryOperator:"UnaryOperator",Set:"Set",If:"If",For:"For",In:"In",Is:"Is",NotIn:"NotIn",Else:"Else",EndIf:"EndIf",ElseIf:"ElseIf",EndFor:"EndFor",And:"And",Or:"Or",Not:"UnaryOperator",Macro:"Macro",EndMacro:"EndMacro"}),P=Object.freeze({set:k.Set,for:k.For,in:k.In,is:k.Is,if:k.If,else:k.Else,endif:k.EndIf,elif:k.ElseIf,endfor:k.EndFor,and:k.And,or:k.Or,not:k.Not,"not in":k.NotIn,macro:k.Macro,endmacro:k.EndMacro,true:k.BooleanLiteral,false:k.BooleanLiteral,none:k.NullLiteral,True:k.BooleanLiteral,False:k.BooleanLiteral,None:k.NullLiteral}),j=class{constructor(ge,$){this.value=ge,this.type=$}};function O(ge){return/\w/.test(ge)}function R(ge){return/[0-9]/.test(ge)}var X=[["{%",k.OpenStatement],["%}",k.CloseStatement],["{{",k.OpenExpression],["}}",k.CloseExpression],["(",k.OpenParen],[")",k.CloseParen],["{",k.OpenCurlyBracket],["}",k.CloseCurlyBracket],["[",k.OpenSquareBracket],["]",k.CloseSquareBracket],[",",k.Comma],[".",k.Dot],[":",k.Colon],["|",k.Pipe],["<=",k.ComparisonBinaryOperator],[">=",k.ComparisonBinaryOperator],["==",k.ComparisonBinaryOperator],["!=",k.ComparisonBinaryOperator],["<",k.ComparisonBinaryOperator],[">",k.ComparisonBinaryOperator],["+",k.AdditiveBinaryOperator],["-",k.AdditiveBinaryOperator],["*",k.MultiplicativeBinaryOperator],["/",k.MultiplicativeBinaryOperator],["%",k.MultiplicativeBinaryOperator],["=",k.Equals]],W=new Map([["n",`
 `],["t","	"],["r","\r"],["b","\b"],["f","\f"],["v","\v"],["'","'"],['"','"'],["\\","\\"]]);function S(ge,$={}){const Ce=[],Se=function(oA,BA={}){return oA.endsWith(`
 `)&&(oA=oA.slice(0,-1)),oA=oA.replace(/{#.*?#}/gs,"{##}"),BA.lstrip_blocks&&(oA=oA.replace(/^[ \t]*({[#%])/gm,"$1")),BA.trim_blocks&&(oA=oA.replace(/([#%]})\n/g,"$1")),oA.replace(/{##}/g,"").replace(/-%}\s*/g,"%}").replace(/\s*{%-/g,"{%").replace(/-}}\s*/g,"}}").replace(/\s*{{-/g,"{{")}(ge,$);let qe=0;const dA=oA=>{let BA="";for(;oA(Se[qe]);)if(Se[qe]!=="\\"){if(BA+=Se[qe++],qe>=Se.length)throw new SyntaxError("Unexpected end of input")}else{if(++qe,qe>=Se.length)throw new SyntaxError("Unexpected end of input");const QA=Se[qe++],TA=W.get(QA);if(TA===void 0)throw new SyntaxError(`Unexpected escaped character: ${QA}`);BA+=TA}return BA};e:for(;qe<Se.length;){const oA=Ce.at(-1)?.type;if(oA===void 0||oA===k.CloseStatement||oA===k.CloseExpression){let QA="";for(;qe<Se.length&&(Se[qe]!=="{"||Se[qe+1]!=="%"&&Se[qe+1]!=="{");)QA+=Se[qe++];if(QA.length>0){Ce.push(new j(QA,k.Text));continue}}dA(QA=>/\s/.test(QA));const BA=Se[qe];if(BA==="-"||BA==="+"){const QA=Ce.at(-1)?.type;if(QA===k.Text||QA===void 0)throw new SyntaxError(`Unexpected character: ${BA}`);switch(QA){case k.Identifier:case k.NumericLiteral:case k.BooleanLiteral:case k.NullLiteral:case k.StringLiteral:case k.CloseParen:case k.CloseSquareBracket:break;default:{++qe;const TA=dA(R);Ce.push(new j(`${BA}${TA}`,TA.length>0?k.NumericLiteral:k.UnaryOperator));continue}}}for(const[QA,TA]of X)if(Se.slice(qe,qe+QA.length)===QA){Ce.push(new j(QA,TA)),qe+=QA.length;continue e}if(BA!=="'"&&BA!=='"')if(R(BA)){const QA=dA(R);Ce.push(new j(QA,k.NumericLiteral))}else{if(!O(BA))throw new SyntaxError(`Unexpected character: ${BA}`);{const QA=dA(O),TA=Object.hasOwn(P,QA)?P[QA]:k.Identifier;TA===k.In&&Ce.at(-1)?.type===k.Not?(Ce.pop(),Ce.push(new j("not in",k.NotIn))):Ce.push(new j(QA,TA))}}else{++qe;const QA=dA(TA=>TA!==BA);Ce.push(new j(QA,k.StringLiteral)),++qe}}return Ce}var q=class{type="Statement"},H=class extends q{constructor(ge){super(),this.body=ge}type="Program"},Ae=class extends q{constructor(ge,$,Ce){super(),this.test=ge,this.body=$,this.alternate=Ce}type="If"},me=class extends q{constructor(ge,$,Ce,Se){super(),this.loopvar=ge,this.iterable=$,this.body=Ce,this.defaultBlock=Se}type="For"},xe=class extends q{constructor(ge,$){super(),this.assignee=ge,this.value=$}type="Set"},Be=class extends q{constructor(ge,$,Ce){super(),this.name=ge,this.args=$,this.body=Ce}type="Macro"},ae=class extends q{type="Expression"},ie=class extends ae{constructor(ge,$,Ce){super(),this.object=ge,this.property=$,this.computed=Ce}type="MemberExpression"},we=class extends ae{constructor(ge,$){super(),this.callee=ge,this.args=$}type="CallExpression"},g=class extends ae{constructor(ge){super(),this.value=ge}type="Identifier"},b=class extends ae{constructor(ge){super(),this.value=ge}type="Literal"},e=class extends b{type="NumericLiteral"},l=class extends b{type="StringLiteral"},M=class extends b{type="BooleanLiteral"},ue=class extends b{type="NullLiteral"},D=class extends b{type="ArrayLiteral"},z=class extends b{type="TupleLiteral"},Re=class extends b{type="ObjectLiteral"},Ne=class extends ae{constructor(ge,$,Ce){super(),this.operator=ge,this.left=$,this.right=Ce}type="BinaryExpression"},Ye=class extends ae{constructor(ge,$){super(),this.operand=ge,this.filter=$}type="FilterExpression"},Je=class extends ae{constructor(ge,$){super(),this.iterable=ge,this.test=$}type="SelectExpression"},AA=class extends ae{constructor(ge,$,Ce){super(),this.operand=ge,this.negate=$,this.test=Ce}type="TestExpression"},xA=class extends ae{constructor(ge,$){super(),this.operator=ge,this.argument=$}type="UnaryExpression"},GA=class extends ae{constructor(ge=void 0,$=void 0,Ce=void 0){super(),this.start=ge,this.stop=$,this.step=Ce}type="SliceExpression"},Ge=class extends ae{constructor(ge,$){super(),this.key=ge,this.value=$}type="KeywordArgumentExpression"};function Ie(ge){const $=new H([]);let Ce=0;function Se(ZA,$A){const PA=ge[Ce++];if(!PA||PA.type!==ZA)throw new Error(`Parser Error: ${$A}. ${PA.type} !== ${ZA}.`);return PA}function qe(){switch(ge[Ce].type){case k.Text:return new l(Se(k.Text,"Expected text token").value);case k.OpenStatement:return function(){let ZA;switch(Se(k.OpenStatement,"Expected opening statement token"),ge[Ce].type){case k.Set:++Ce,ZA=BA(),Se(k.CloseStatement,"Expected closing statement token");break;case k.If:++Ce,ZA=QA(),Se(k.OpenStatement,"Expected {% token"),Se(k.EndIf,"Expected endif token"),Se(k.CloseStatement,"Expected %} token");break;case k.Macro:++Ce,ZA=function(){const $A=xn();if($A.type!=="Identifier")throw new SyntaxError("Expected identifier following macro statement");const PA=tr();Se(k.CloseStatement,"Expected closing statement token");const qt=[];for(;dA(k.OpenStatement,k.EndMacro);)qt.push(qe());return new Be($A,PA,qt)}(),Se(k.OpenStatement,"Expected {% token"),Se(k.EndMacro,"Expected endmacro token"),Se(k.CloseStatement,"Expected %} token");break;case k.For:++Ce,ZA=function(){const $A=TA(!0);if(!($A instanceof g||$A instanceof z))throw new SyntaxError(`Expected identifier/tuple for the loop variable, got ${$A.type} instead`);Se(k.In,"Expected `in` keyword following loop variable");const PA=Mt();Se(k.CloseStatement,"Expected closing statement token");const qt=[];for(;dA(k.OpenStatement,k.EndFor)&&dA(k.OpenStatement,k.Else);)qt.push(qe());const ua=[];if(oA(k.OpenStatement,k.Else))for(++Ce,++Ce,Se(k.CloseStatement,"Expected closing statement token");dA(k.OpenStatement,k.EndFor);)ua.push(qe());return new me($A,PA,qt,ua)}(),Se(k.OpenStatement,"Expected {% token"),Se(k.EndFor,"Expected endfor token"),Se(k.CloseStatement,"Expected %} token");break;default:throw new SyntaxError(`Unknown statement type: ${ge[Ce].type}`)}return ZA}();case k.OpenExpression:return function(){Se(k.OpenExpression,"Expected opening expression token");const ZA=Mt();return Se(k.CloseExpression,"Expected closing expression token"),ZA}();default:throw new SyntaxError(`Unexpected token type: ${ge[Ce].type}`)}}function dA(...ZA){return Ce+ZA.length<=ge.length&&ZA.some(($A,PA)=>$A!==ge[Ce+PA].type)}function oA(...ZA){return Ce+ZA.length<=ge.length&&ZA.every(($A,PA)=>$A===ge[Ce+PA].type)}function BA(){const ZA=Mt();if(oA(k.Equals)){++Ce;const $A=BA();return new xe(ZA,$A)}return ZA}function QA(){const ZA=Mt();Se(k.CloseStatement,"Expected closing statement token");const $A=[],PA=[];for(;ge[Ce]?.type!==k.OpenStatement||ge[Ce+1]?.type!==k.ElseIf&&ge[Ce+1]?.type!==k.Else&&ge[Ce+1]?.type!==k.EndIf;)$A.push(qe());if(ge[Ce]?.type===k.OpenStatement&&ge[Ce+1]?.type!==k.EndIf)if(++Ce,oA(k.ElseIf))Se(k.ElseIf,"Expected elseif token"),PA.push(QA());else for(Se(k.Else,"Expected else token"),Se(k.CloseStatement,"Expected closing statement token");ge[Ce]?.type!==k.OpenStatement||ge[Ce+1]?.type!==k.EndIf;)PA.push(qe());return new Ae(ZA,$A,PA)}function TA(ZA=!1){const $A=ZA?xn:Mt,PA=[$A()],qt=oA(k.Comma);for(;qt&&(++Ce,PA.push($A()),oA(k.Comma)););return qt?new z(PA):PA[0]}function Mt(){return function(){const ZA=Tt();if(oA(k.If)){++Ce;const $A=Tt();if(oA(k.Else)){++Ce;const PA=Tt();return new Ae($A,[ZA],[PA])}return new Je(ZA,$A)}return ZA}()}function Tt(){let ZA=ut();for(;oA(k.Or);){const $A=ge[Ce];++Ce;const PA=ut();ZA=new Ne($A,ZA,PA)}return ZA}function ut(){let ZA=Ct();for(;oA(k.And);){const $A=ge[Ce];++Ce;const PA=Ct();ZA=new Ne($A,ZA,PA)}return ZA}function Ct(){let ZA;for(;oA(k.Not);){const $A=ge[Ce];++Ce;const PA=Ct();ZA=new xA($A,PA)}return ZA??function(){let $A=er();for(;oA(k.ComparisonBinaryOperator)||oA(k.In)||oA(k.NotIn);){const PA=ge[Ce];++Ce;const qt=er();$A=new Ne(PA,$A,qt)}return $A}()}function er(){let ZA=Xn();for(;oA(k.AdditiveBinaryOperator);){const $A=ge[Ce];++Ce;const PA=Xn();ZA=new Ne($A,ZA,PA)}return ZA}function Tr(ZA){let $A=new we(ZA,tr());return $A=bt($A),oA(k.OpenParen)&&($A=Tr($A)),$A}function tr(){Se(k.OpenParen,"Expected opening parenthesis for arguments list");const ZA=function(){const $A=[];for(;!oA(k.CloseParen);){let PA=Mt();if(oA(k.Equals)){if(++Ce,!(PA instanceof g))throw new SyntaxError("Expected identifier for keyword argument");const qt=Mt();PA=new Ge(PA,qt)}$A.push(PA),oA(k.Comma)&&++Ce}return $A}();return Se(k.CloseParen,"Expected closing parenthesis for arguments list"),ZA}function pn(){const ZA=[];let $A=!1;for(;!oA(k.CloseSquareBracket);)oA(k.Colon)?(ZA.push(void 0),++Ce,$A=!0):(ZA.push(Mt()),oA(k.Colon)&&(++Ce,$A=!0));if(ZA.length===0)throw new SyntaxError("Expected at least one argument for member/slice expression");if($A){if(ZA.length>3)throw new SyntaxError("Expected 0-3 arguments for slice expression");return new GA(...ZA)}return ZA[0]}function bt(ZA){for(;oA(k.Dot)||oA(k.OpenSquareBracket);){const $A=ge[Ce];let PA;++Ce;const qt=$A.type!==k.Dot;if(qt)PA=pn(),Se(k.CloseSquareBracket,"Expected closing square bracket");else if(PA=xn(),PA.type!=="Identifier")throw new SyntaxError("Expected identifier following dot operator");ZA=new ie(ZA,PA,qt)}return ZA}function Xn(){let ZA=Yn();for(;oA(k.MultiplicativeBinaryOperator);){const $A=ge[Ce];++Ce;const PA=Yn();ZA=new Ne($A,ZA,PA)}return ZA}function Yn(){let ZA=function(){let $A=function(){const PA=bt(xn());return oA(k.OpenParen)?Tr(PA):PA}();for(;oA(k.Pipe);){++Ce;let PA=xn();if(!(PA instanceof g))throw new SyntaxError("Expected identifier for the filter");oA(k.OpenParen)&&(PA=Tr(PA)),$A=new Ye($A,PA)}return $A}();for(;oA(k.Is);){++Ce;const $A=oA(k.Not);$A&&++Ce;let PA=xn();if(PA instanceof M?PA=new g(PA.value.toString()):PA instanceof ue&&(PA=new g("none")),!(PA instanceof g))throw new SyntaxError("Expected identifier for the test");ZA=new AA(ZA,$A,PA)}return ZA}function xn(){const ZA=ge[Ce];switch(ZA.type){case k.NumericLiteral:return++Ce,new e(Number(ZA.value));case k.StringLiteral:return++Ce,new l(ZA.value);case k.BooleanLiteral:return++Ce,new M(ZA.value.toLowerCase()==="true");case k.NullLiteral:return++Ce,new ue(null);case k.Identifier:return++Ce,new g(ZA.value);case k.OpenParen:{++Ce;const $A=TA();if(ge[Ce].type!==k.CloseParen)throw new SyntaxError(`Expected closing parenthesis, got ${ge[Ce].type} instead`);return++Ce,$A}case k.OpenSquareBracket:{++Ce;const $A=[];for(;!oA(k.CloseSquareBracket);)$A.push(Mt()),oA(k.Comma)&&++Ce;return++Ce,new D($A)}case k.OpenCurlyBracket:{++Ce;const $A=new Map;for(;!oA(k.CloseCurlyBracket);){const PA=Mt();Se(k.Colon,"Expected colon between key and value in object literal");const qt=Mt();$A.set(PA,qt),oA(k.Comma)&&++Ce}return++Ce,new Re($A)}default:throw new SyntaxError(`Unexpected token: ${ZA.type}`)}}for(;Ce<ge.length;)$.body.push(qe());return $}function ze(ge,$,Ce=1){$===void 0&&($=ge,ge=0);const Se=[];for(let qe=ge;qe<$;qe+=Ce)Se.push(qe);return Se}function Ue(ge,$,Ce,Se=1){const qe=Math.sign(Se);qe>=0?($=($??=0)<0?Math.max(ge.length+$,0):Math.min($,ge.length),Ce=(Ce??=ge.length)<0?Math.max(ge.length+Ce,0):Math.min(Ce,ge.length)):($=($??=ge.length-1)<0?Math.max(ge.length+$,-1):Math.min($,ge.length-1),Ce=(Ce??=-1)<-1?Math.max(ge.length+Ce,-1):Math.min(Ce,ge.length-1));const dA=[];for(let oA=$;qe*oA<qe*Ce;oA+=Se)dA.push(ge[oA]);return dA}function Pe(ge){return ge.replace(/\b\w/g,$=>$.toUpperCase())}var kA=class{type="RuntimeValue";value;builtins=new Map;constructor(ge=void 0){this.value=ge}__bool__(){return new yA(!!this.value)}},nA=class extends kA{type="NumericValue"},sA=class extends kA{type="StringValue";builtins=new Map([["upper",new CA(()=>new sA(this.value.toUpperCase()))],["lower",new CA(()=>new sA(this.value.toLowerCase()))],["strip",new CA(()=>new sA(this.value.trim()))],["title",new CA(()=>new sA(Pe(this.value)))],["length",new nA(this.value.length)],["rstrip",new CA(()=>new sA(this.value.trimEnd()))],["lstrip",new CA(()=>new sA(this.value.trimStart()))],["split",new CA(ge=>{const $=ge[0]??new Te;if(!($ instanceof sA||$ instanceof Te))throw new Error("sep argument must be a string or null");const Ce=ge[1]??new nA(-1);if(!(Ce instanceof nA))throw new Error("maxsplit argument must be a number");let Se=[];if($ instanceof Te){const qe=this.value.trimStart();for(const{0:dA,index:oA}of qe.matchAll(/\S+/g)){if(Ce.value!==-1&&Se.length>=Ce.value&&oA!==void 0){Se.push(dA+qe.slice(oA+dA.length));break}Se.push(dA)}}else{if($.value==="")throw new Error("empty separator");Se=this.value.split($.value),Ce.value!==-1&&Se.length>Ce.value&&Se.push(Se.splice(Ce.value).join($.value))}return new Ze(Se.map(qe=>new sA(qe)))})]])},yA=class extends kA{type="BooleanValue"},iA=class extends kA{type="ObjectValue";__bool__(){return new yA(this.value.size>0)}builtins=new Map([["get",new CA(([ge,$])=>{if(!(ge instanceof sA))throw new Error(`Object key must be a string: got ${ge.type}`);return this.value.get(ge.value)??$??new Te})],["items",new CA(()=>new Ze(Array.from(this.value.entries()).map(([ge,$])=>new Ze([new sA(ge),$]))))]])},Fe=class extends iA{type="KeywordArgumentsValue"},Ze=class extends kA{type="ArrayValue";builtins=new Map([["length",new nA(this.value.length)]]);__bool__(){return new yA(this.value.length>0)}},mA=class extends Ze{type="TupleValue"},CA=class extends kA{type="FunctionValue"},Te=class extends kA{type="NullValue"},pA=class extends kA{type="UndefinedValue"},EA=class{constructor(ge){this.parent=ge}variables=new Map([["namespace",new CA(ge=>{if(ge.length===0)return new iA(new Map);if(ge.length!==1||!(ge[0]instanceof iA))throw new Error("`namespace` expects either zero arguments or a single object argument");return ge[0]})]]);tests=new Map([["boolean",ge=>ge.type==="BooleanValue"],["callable",ge=>ge instanceof CA],["odd",ge=>{if(ge.type!=="NumericValue")throw new Error(`Cannot apply test "odd" to type: ${ge.type}`);return ge.value%2!=0}],["even",ge=>{if(ge.type!=="NumericValue")throw new Error(`Cannot apply test "even" to type: ${ge.type}`);return ge.value%2==0}],["false",ge=>ge.type==="BooleanValue"&&!ge.value],["true",ge=>ge.type==="BooleanValue"&&ge.value],["none",ge=>ge.type==="NullValue"],["string",ge=>ge.type==="StringValue"],["number",ge=>ge.type==="NumericValue"],["integer",ge=>ge.type==="NumericValue"&&Number.isInteger(ge.value)],["iterable",ge=>ge.type==="ArrayValue"||ge.type==="StringValue"],["mapping",ge=>ge.type==="ObjectValue"],["lower",ge=>{const $=ge.value;return ge.type==="StringValue"&&$===$.toLowerCase()}],["upper",ge=>{const $=ge.value;return ge.type==="StringValue"&&$===$.toUpperCase()}],["none",ge=>ge.type==="NullValue"],["defined",ge=>ge.type!=="UndefinedValue"],["undefined",ge=>ge.type==="UndefinedValue"],["equalto",(ge,$)=>ge.value===$.value],["eq",(ge,$)=>ge.value===$.value]]);set(ge,$){return this.declareVariable(ge,YA($))}declareVariable(ge,$){if(this.variables.has(ge))throw new SyntaxError(`Variable already declared: ${ge}`);return this.variables.set(ge,$),$}setVariable(ge,$){return this.variables.set(ge,$),$}resolve(ge){if(this.variables.has(ge))return this;if(this.parent)return this.parent.resolve(ge);throw new Error(`Unknown variable: ${ge}`)}lookupVariable(ge){try{return this.resolve(ge).variables.get(ge)??new pA}catch{return new pA}}},SA=class{global;constructor(ge){this.global=ge??new EA}run(ge){return this.evaluate(ge,this.global)}evaluateBinaryExpression(ge,$){const Ce=this.evaluate(ge.left,$);switch(ge.operator.value){case"and":return Ce.__bool__().value?this.evaluate(ge.right,$):Ce;case"or":return Ce.__bool__().value?Ce:this.evaluate(ge.right,$)}const Se=this.evaluate(ge.right,$);switch(ge.operator.value){case"==":return new yA(Ce.value==Se.value);case"!=":return new yA(Ce.value!=Se.value)}if(Ce instanceof pA||Se instanceof pA)throw new Error("Cannot perform operation on undefined values");if(Ce instanceof Te||Se instanceof Te)throw new Error("Cannot perform operation on null values");if(Ce instanceof nA&&Se instanceof nA)switch(ge.operator.value){case"+":return new nA(Ce.value+Se.value);case"-":return new nA(Ce.value-Se.value);case"*":return new nA(Ce.value*Se.value);case"/":return new nA(Ce.value/Se.value);case"%":return new nA(Ce.value%Se.value);case"<":return new yA(Ce.value<Se.value);case">":return new yA(Ce.value>Se.value);case">=":return new yA(Ce.value>=Se.value);case"<=":return new yA(Ce.value<=Se.value)}else if(Ce instanceof Ze&&Se instanceof Ze){if(ge.operator.value==="+")return new Ze(Ce.value.concat(Se.value))}else if(Se instanceof Ze){const qe=Se.value.find(dA=>dA.value===Ce.value)!==void 0;switch(ge.operator.value){case"in":return new yA(qe);case"not in":return new yA(!qe)}}if((Ce instanceof sA||Se instanceof sA)&&ge.operator.value==="+")return new sA(Ce.value.toString()+Se.value.toString());if(Ce instanceof sA&&Se instanceof sA)switch(ge.operator.value){case"in":return new yA(Se.value.includes(Ce.value));case"not in":return new yA(!Se.value.includes(Ce.value))}if(Ce instanceof sA&&Se instanceof iA)switch(ge.operator.value){case"in":return new yA(Se.value.has(Ce.value));case"not in":return new yA(!Se.value.has(Ce.value))}throw new SyntaxError(`Unknown operator "${ge.operator.value}" between ${Ce.type} and ${Se.type}`)}evaluateArguments(ge,$){const Ce=[],Se=new Map;for(const qe of ge)if(qe.type==="KeywordArgumentExpression"){const dA=qe;Se.set(dA.key.value,this.evaluate(dA.value,$))}else{if(Se.size>0)throw new Error("Positional arguments must come before keyword arguments");Ce.push(this.evaluate(qe,$))}return[Ce,Se]}evaluateFilterExpression(ge,$){const Ce=this.evaluate(ge.operand,$);if(ge.filter.type==="Identifier"){const Se=ge.filter;if(Se.value==="tojson")return new sA(J(Ce));if(Ce instanceof Ze)switch(Se.value){case"list":return Ce;case"first":return Ce.value[0];case"last":return Ce.value[Ce.value.length-1];case"length":return new nA(Ce.value.length);case"reverse":return new Ze(Ce.value.reverse());case"sort":return new Ze(Ce.value.sort((qe,dA)=>{if(qe.type!==dA.type)throw new Error(`Cannot compare different types: ${qe.type} and ${dA.type}`);switch(qe.type){case"NumericValue":return qe.value-dA.value;case"StringValue":return qe.value.localeCompare(dA.value);default:throw new Error(`Cannot compare type: ${qe.type}`)}}));case"join":return new sA(Ce.value.map(qe=>qe.value).join(""));default:throw new Error(`Unknown ArrayValue filter: ${Se.value}`)}else if(Ce instanceof sA)switch(Se.value){case"length":return new nA(Ce.value.length);case"upper":return new sA(Ce.value.toUpperCase());case"lower":return new sA(Ce.value.toLowerCase());case"title":return new sA(Pe(Ce.value));case"capitalize":return new sA(Ce.value.charAt(0).toUpperCase()+Ce.value.slice(1));case"trim":return new sA(Ce.value.trim());case"indent":return new sA(Ce.value.split(`
